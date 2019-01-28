@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import Setting from 'components/Setting/Setting.jsx';
 
 class Footer extends Component {
     render(){
         return (
             <footer className={"footer" + (this.props.transparent !== undefined ? " footer-transparent":"")}>
+                <Setting />
                 <div className={"container" + (this.props.fluid !== undefined ? "-fluid":"")}>
                     <nav className="pull-left">
                         <ul>
