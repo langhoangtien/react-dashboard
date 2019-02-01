@@ -28,38 +28,116 @@ const switchOff = "bootstrap-switch wrapper bootstrap-switch-off bootstrap-switc
              <div className="fixed-plugin">
              <div id="fixedPluginClasses" className="dropdown show-dropdown open">
                 <div><i onClick={()=>this.toogleConfig()} className="fa fa-cog fa-2x" /></div>
-                    <ul className="dropdown-menu">
-                        <li className="header-title">Configuration</li>
-                        <li className="adjustments-line">
-                            <p className="pull-left">Background Image</p>
-                            <div className="pull-right">
-                                <div className={this.state.switchBackground ? switchOn : switchOff} onClick={()=>this.toggleSwitch("switchBackground")} tabIndex={0} style={{width: '100px'}}>
-                                <div className="bootstrap-switch-container" style={{width: '150px', marginLeft: '0px'}}>
-                            <span className="bootstrap-switch-handle-on bootstrap-switch-primary" style={{width: '50px'}}>ON</span><span className="bootstrap-switch-label" style={{width: '50px'}}> </span>
-                            <span className="bootstrap-switch-handle-off bootstrap-switch-default" style={{width: '50px'}}>OFF</span></div></div></div><div className="clearfix" /></li>
-                        <li className="adjustments-line"><p className="pull-left">Sidebar Mini</p><div className="pull-right">
+                <ul className="dropdown-menu">
+                    <li className="header-title">Configuration
+                    </li>
+                    <li className="adjustments-line">
+                        <p className="pull-left">Background Image</p>
+                        <div className="pull-right">
+                            <div className={this.state.switchBackground ? switchOn : switchOff} onClick={()=>this.toggleSwitch("switchBackground")} tabIndex={0} style={{width: '100px'}}>
+                                    <div className="bootstrap-switch-container" style={{width: '150px', marginLeft: '0px'}}>
+                                        <span className="bootstrap-switch-handle-on bootstrap-switch-primary" style={{width: '50px'}}>ON</span>
+                                        <span className="bootstrap-switch-label" style={{width: '50px'}}> </span>
+                                        <span className="bootstrap-switch-handle-off bootstrap-switch-default" style={{width: '50px'}}>OFF</span>
+                                    </div>
+                            </div>
+                        </div>
+                        <div className="clearfix" />
+                    </li>
+                    <li className="adjustments-line">
+                        <p className="pull-left">Sidebar Mini</p>
+                        <div className="pull-right">
                             <div className={this.state.switchSidebarMini ? switchOn : switchOff} onClick={()=>this.toggleSwitch("switchSidebarMini")} tabIndex={0} style={{width: '100px'}}>
-                            <div className="bootstrap-switch-container" style={{width: '150px', marginLeft: '-50px'}}><span className="bootstrap-switch-handle-on bootstrap-switch-primary" style={{width: '50px'}}>ON</span><span className="bootstrap-switch-label" style={{width: '50px'}}> </span><span className="bootstrap-switch-handle-off bootstrap-switch-default" style={{width: '50px'}}>OFF</span></div></div></div><div className="clearfix" /></li>
-                        <li className="adjustments-line"><p className="pull-left">Fixed Navbar</p><div className="pull-right">
+                                <div className="bootstrap-switch-container" style={{width: '150px', marginLeft: '-50px'}}>
+                                    <span className="bootstrap-switch-handle-on bootstrap-switch-primary" style={{width: '50px'}}>ON</span>
+                                    <span className="bootstrap-switch-label" style={{width: '50px'}}> </span>
+                                    <span className="bootstrap-switch-handle-off bootstrap-switch-default" style={{width: '50px'}}>OFF</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="clearfix" />
+                    </li>
+                    <li className="adjustments-line"><p className="pull-left">Fixed Navbar</p>
+                        <div className="pull-right">
                             <div className={this.state.switchFixedNavbar ? switchOn : switchOff} onClick = {()=>this.toggleSwitch('switchFixedNavbar')} tabIndex={0} style={{width: '100px'}}>
-                            <div className="bootstrap-switch-container" style={{width: '150px', marginLeft: '-50px'}}><span className="bootstrap-switch-handle-on bootstrap-switch-primary" style={{width: '50px'}}>ON</span><span className="bootstrap-switch-label" style={{width: '50px'}}> </span><span className="bootstrap-switch-handle-off bootstrap-switch-default" style={{width: '50px'}}>OFF</span></div></div></div></li>
-                        <li className="adjustments-line"><a className="switch-trigger"><p>Filters</p><div className="pull-right"><span className="badge filter active" data-color="black" /><span className="badge filter badge-azure" data-color="azure" /><span className="badge filter badge-green" data-color="green" /><span className="badge filter badge-orange" data-color="orange" /><span className="badge filter badge-red" data-color="red" /><span className="badge filter badge-purple" data-color="purple" /></div><div className="clearfix" /></a></li>
-                        <li className="header-title">Sidebar Images</li>
-                        <li><a className="img-holder switch-trigger"><img src={sidebar_1} alt="..." /></a></li>
-                        <li><a className="img-holder switch-trigger"><img src={sidebar_2} alt="..." /></a></li>
-                        <li className="active"><a className="img-holder switch-trigger"><img src={sidebar_3} alt="..." /></a></li>
-                        <li><a className="img-holder switch-trigger"><img src={sidebar_4} alt="..." /></a></li>
-                        <li className="button-container"><div><a href="https://www.creative-tim.com/product/light-bootstrap-dashboard-react" target="_blank" className="btn btn-success btn-block btn-fill">Download free!</a></div></li>
-                        <li className="button-container"><div><a href="https://www.creative-tim.com/product/light-bootstrap-dashboard-pro-react" target="_blank" className="btn btn-warning btn-block btn-fill">Buy Pro</a></div></li>
-                        <li className="button-container"><a className="btn btn-fill btn-info" aria-current="false" href="#/documentation">Documentation</a></li>
-                        <li className="header-title" id="sharrreTitle">Thank you for sharing!</li>
-                        <li className="button-container">
-                            <div role="button" tabIndex={0} className="SocialMediaShareButton SocialMediaShareButton--facebook">
-                            <div style={{width: '32px', height: '32px'}}><svg viewBox="0 0 64 64" width={32} height={32} className="social-icon social-icon--facebook "><g><circle cx={32} cy={32} r={31} fill="#3b5998" /></g><g><path d={fb} fill="white" /></g></svg></div>
+                                <div className="bootstrap-switch-container" style={{width: '150px', marginLeft: '-50px'}}>
+                                    <span className="bootstrap-switch-handle-on bootstrap-switch-primary" style={{width: '50px'}}>ON</span>
+                                    <span className="bootstrap-switch-label" style={{width: '50px'}}> </span>
+                                    <span className="bootstrap-switch-handle-off bootstrap-switch-default" style={{width: '50px'}}>OFF</span>
+                                </div>
                             </div>
-                            <div role="button" tabIndex={0} className="SocialMediaShareButton SocialMediaShareButton--twitter"><div style={{width: '32px', height: '32px'}}><svg viewBox="0 0 64 64" width={32} height={32} className="social-icon social-icon--twitter "><g><circle cx={32} cy={32} r={31} fill="#00aced" /></g><g><path d={tw} fill="white" /></g></svg></div>
+                        </div>
+                    </li>
+                    <li className="adjustments-line">
+                        <a className="switch-trigger">
+                            <p>Filters</p>
+                            <div className="pull-right">
+                                <span className="badge filter active" data-color="black" />
+                                <span className="badge filter badge-azure" data-color="azure" />
+                                <span className="badge filter badge-green" data-color="green" />
+                                <span className="badge filter badge-orange" data-color="orange" />
+                                <span className="badge filter badge-red" data-color="red" />
+                                <span className="badge filter badge-purple" data-color="purple" />
                             </div>
-                        </li>
+                            <div className="clearfix" />
+                        </a>
+                    </li>
+                    <li className="header-title">Sidebar Images
+                    </li>
+                    <li>
+                        <a className="img-holder switch-trigger">
+                            <img src={sidebar_1} alt="..." />
+                        </a>
+                    </li>
+                    <li>
+                        <a className="img-holder switch-trigger">
+                            <img src={sidebar_2} alt="..." />
+                        </a>
+                    </li>
+                    <li className="active">
+                        <a className="img-holder switch-trigger">
+                            <img src={sidebar_3} alt="..." />
+                        </a>
+                    </li>
+                    <li>
+                        <a className="img-holder switch-trigger">
+                            <img src={sidebar_4} alt="..." />
+                        </a>
+                    </li>
+                    <li className="button-container">
+                        <div>
+                            <a href="#" target="_blank" className="btn btn-success btn-block btn-fill">Download free!
+                            </a>
+                        </div>
+                    </li>
+                    <li className="button-container">
+                        <div>
+                            <a href="#" target="_blank" className="btn btn-warning btn-block btn-fill">Buy Pro</a>
+                        </div>
+                    </li>
+                    <li className="button-container">
+                        <a className="btn btn-fill btn-info" aria-current="false" href="#/documentation">Documentation</a>
+                    </li>
+                    <li className="header-title" id="sharrreTitle">Thank you for sharing!
+                    </li>
+                    <li className="button-container">
+                        <div role="button" tabIndex={0} className="SocialMediaShareButton SocialMediaShareButton--facebook">
+                            <div style={{width: '32px', height: '32px'}}>
+                                <svg viewBox="0 0 64 64" width={32} height={32} className="social-icon social-icon--facebook ">
+                                    <g><circle cx={32} cy={32} r={31} fill="#3b5998" /></g>
+                                    <g><path d={fb} fill="white" /></g>
+                                </svg>
+                            </div>
+                        </div>
+                        <div role="button" tabIndex={0} className="SocialMediaShareButton SocialMediaShareButton--twitter">
+                            <div style={{width: '32px', height: '32px'}}> 
+                                <svg viewBox="0 0 64 64" width={32} height={32} className="social-icon social-icon--twitter ">
+                                    <g><circle cx={32} cy={32} r={31} fill="#00aced" /></g>
+                                    <g><path d={tw} fill="white" /></g>
+                                </svg>
+                            </div>
+                        </div>
+                    </li>
                     </ul>
                 </div>
              </div>
