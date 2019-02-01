@@ -38,24 +38,29 @@ class Dash extends Component{
     handleNotificationClick(position){
         var color = Math.floor((Math.random() * 4) + 1);
         var level;
+        let icon;
         switch (color) {
             case 1:
                 level = 'success';
+                icon = 'pe-7s-check';
                 break;
             case 2:
                 level = 'warning';
+                icon = 'pe-7s-attention';
                 break;
             case 3:
                 level = 'error';
+                icon = 'pe-7s-help1';
                 break;
             case 4:
                 level = 'info';
+                icon= 'pe-7s-info';
                 break;
             default:
                 break;
         }
         this.state._notificationSystem.addNotification({
-            title: (<span data-notify="icon" className="pe-7s-gift"></span>),
+            title: (<span data-notify="icon" className={icon}></span>),
             message: (
                 <div>
                     Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer.
