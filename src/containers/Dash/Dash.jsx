@@ -25,7 +25,8 @@ class Dash extends Component{
         super(props);
         this.handleNotificationClick = this.handleNotificationClick.bind(this);
         this.state = {
-            _notificationSystem: null
+            _notificationSystem: null,
+            background:true,
         };
     }
     componentDidMount(){
@@ -96,7 +97,7 @@ class Dash extends Component{
         return (
             <div className="wrapper">
                 <NotificationSystem ref="notificationSystem" style={style}/>
-                <Sidebar {...this.props} />
+                <Sidebar background={this.state.background} {...this.props} />
                 <div className={"main-panel"+(this.props.location.pathname === "/maps/full-screen-maps" ? " main-panel-maps":"")} ref="mainPanel">
                     <Header {...this.props}/>
                         <Switch>
@@ -135,7 +136,7 @@ class Dash extends Component{
                                 })
                             }
                         </Switch>
-                    <Footer fluid/>
+                    <Footer background={value=>this.setState({background:value})} fluid/>
                 </div>
             </div>
         );

@@ -16,7 +16,7 @@ import logo from "logo.svg";
 import dashRoutes from 'routes/dash.jsx';
 
 const bgImage = {backgroundImage: "url("+image+")"};
-
+const Background = () => (<div className="sidebar-background" style={bgImage}></div>);
 class Sidebar extends Component{
     constructor(props){
         super(props);
@@ -65,7 +65,7 @@ class Sidebar extends Component{
         return (
 
             <div className="sidebar" data-color="black" data-image={image}>
-                <div className="sidebar-background" style={bgImage}></div>
+            {this.props.background ? <Background /> : ""}              
                 <div className="logo">
                 	<Link to="#" className="simple-text logo-mini">
                         <div className="logo-img">

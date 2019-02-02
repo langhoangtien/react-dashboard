@@ -5,7 +5,7 @@ class Footer extends Component {
     render(){
         return (
             <footer className={"footer" + (this.props.transparent !== undefined ? " footer-transparent":"")}>
-                <Setting />
+                <Setting background={this.props.background} />
                 <div className={"container" + (this.props.fluid !== undefined ? "-fluid":"")}>
                     <nav className="pull-left">
                         <ul>

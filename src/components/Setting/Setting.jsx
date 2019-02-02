@@ -22,7 +22,9 @@ const switchOff = "bootstrap-switch wrapper bootstrap-switch-off bootstrap-switc
      }
      toggleSwitch(switchName){
         this.setState({[switchName]:  !this.state[switchName]});
+        this.props.background(this.state.switchBackground);
      }
+
      render(){
          return(
              <div className="fixed-plugin">
