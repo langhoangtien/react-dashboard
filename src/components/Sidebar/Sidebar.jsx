@@ -28,7 +28,7 @@ class Sidebar extends Component{
             openMaps: (this.activeRoute("/maps") !== '' ? true:false),
             openPages: (this.activeRoute("/pages") !== '' ? true:false),
             isWindows: (navigator.platform.indexOf('Win') > -1 ? true : false),
-            width: window.innerWidth
+            width: window.innerWidth,
         }
     }
     // verifies if routeName is the one active (in browser input)
@@ -64,7 +64,7 @@ class Sidebar extends Component{
     render(){
         return (
 
-            <div className="sidebar" data-color="black" data-image={image}>
+            <div className="sidebar" data-color={this.props.color} data-image={image}>
             {this.props.background ? <Background /> : ""}              
                 <div className="logo">
                 	<Link to="#" className="simple-text logo-mini">

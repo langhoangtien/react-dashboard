@@ -27,6 +27,7 @@ class Dash extends Component{
         this.state = {
             _notificationSystem: null,
             background:true,
+            color: "black"
         };
     }
     componentDidMount(){
@@ -97,7 +98,7 @@ class Dash extends Component{
         return (
             <div className="wrapper">
                 <NotificationSystem ref="notificationSystem" style={style}/>
-                <Sidebar background={this.state.background} {...this.props} />
+                <Sidebar {...this.state} {...this.props} />
                 <div className={"main-panel"+(this.props.location.pathname === "/maps/full-screen-maps" ? " main-panel-maps":"")} ref="mainPanel">
                     <Header {...this.props}/>
                         <Switch>
@@ -136,7 +137,7 @@ class Dash extends Component{
                                 })
                             }
                         </Switch>
-                    <Footer background={value=>this.setState({background:value})} fluid/>
+                    <Footer color ={value=>this.setState({color:value})} background={value=>this.setState({background:value})} fluid/>
                 </div>
             </div>
         );
