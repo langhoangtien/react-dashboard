@@ -4,6 +4,8 @@ import {
     Route,
     Redirect
 } from 'react-router-dom';
+// backgroundImage for Sidebar
+import image from 'assets/img/full-screen-image-3.jpg';
 // this is used to create scrollbars on windows devices like the ones from apple devices
 import PerfectScrollbar from 'perfect-scrollbar';
 import 'perfect-scrollbar/css/perfect-scrollbar.css';
@@ -27,7 +29,8 @@ class Dash extends Component{
         this.state = {
             _notificationSystem: null,
             background:true,
-            color: "black"
+            color: "black",
+            image: image,
         };
     }
     componentDidMount(){
@@ -72,6 +75,9 @@ class Dash extends Component{
             position: position,
             autoDismiss: 15,
         });
+    }
+    changeBackground(value){
+        this.setState({image: value});
     }
     // function that creates perfect scroll bar for windows users (it creates a scrollbar that looks like the one from apple devices)
     isMac(){
@@ -137,7 +143,7 @@ class Dash extends Component{
                                 })
                             }
                         </Switch>
-                    <Footer color ={value=>this.setState({color:value})} background={value=>this.setState({background:value})} fluid/>
+                    <Footer changeImage={value =>this.setState({image:value})} color ={value=>this.setState({color:value})} background={value=>this.setState({background:value})} fluid/>
                 </div>
             </div>
         );

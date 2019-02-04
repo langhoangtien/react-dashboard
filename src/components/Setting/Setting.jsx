@@ -22,6 +22,9 @@ const switchOff = "bootstrap-switch wrapper bootstrap-switch-off bootstrap-switc
        document.getElementById('fixedPluginClasses').classList.toggle('open');
       
      }
+     changeImage(image){
+        this.props.changeImage(image);
+     }
      toggleSwitch(switchName){
         this.setState({[switchName]:  !this.state[switchName]});
         if(switchName == "switchBackground")
@@ -96,22 +99,22 @@ const switchOff = "bootstrap-switch wrapper bootstrap-switch-off bootstrap-switc
                     </li>
                     <li>
                         <a className="img-holder switch-trigger">
-                            <img src={sidebar_1} alt="..." />
+                            <img src={sidebar_1} onClick={()=>this.changeImage(sidebar_1)} alt="..." />
                         </a>
                     </li>
                     <li>
                         <a className="img-holder switch-trigger">
-                            <img src={sidebar_2} alt="..." />
+                            <img src={sidebar_2} onClick={()=>this.changeImage(sidebar_2)} alt="..." />
                         </a>
                     </li>
                     <li className="active">
                         <a className="img-holder switch-trigger">
-                            <img src={sidebar_3} alt="..." />
+                            <img src={sidebar_3} onClick={()=>this.changeImage(sidebar_3)} alt="..." />
                         </a>
                     </li>
                     <li>
                         <a className="img-holder switch-trigger">
-                            <img src={sidebar_4} alt="..." />
+                            <img src={sidebar_4} onClick={()=>this.changeImage(sidebar_4)} alt="..." />
                         </a>
                     </li>
                     <li className="button-container">

@@ -6,8 +6,6 @@ import PerfectScrollbar  from 'perfect-scrollbar';
 import 'perfect-scrollbar/css/perfect-scrollbar.css';
 import HeaderLinks from 'components/Header/HeaderLinks.jsx';
 
-// backgroundImage for Sidebar
-import image from 'assets/img/full-screen-image-3.jpg';
 // image for avatar in Sidebar
 import avatar from 'assets/img/teamdk.jpg';
 // logo for sidebar
@@ -15,8 +13,7 @@ import logo from "logo.svg";
 
 import dashRoutes from 'routes/dash.jsx';
 
-const bgImage = {backgroundImage: "url("+image+")"};
-const Background = () => (<div className="sidebar-background" style={bgImage}></div>);
+
 class Sidebar extends Component{
     constructor(props){
         super(props);
@@ -62,9 +59,10 @@ class Sidebar extends Component{
         return bool;
     }
     render(){
+        const bgImage = {backgroundImage: "url("+this.props.image+")"};
+        const Background = () => (<div className="sidebar-background" style={bgImage}></div>);
         return (
-
-            <div className="sidebar" data-color={this.props.color} data-image={image}>
+            <div className="sidebar" data-color={this.props.color} data-image={this.props.image}>
             {this.props.background ? <Background /> : ""}              
                 <div className="logo">
                 	<Link to="#" className="simple-text logo-mini">
